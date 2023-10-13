@@ -26,13 +26,27 @@ function App() {
     };
 
     let a = await fetch('http://localhost:5005/webhooks/rest/webhook', requestOptions)
-    let b = await a.json()
+    .catch(err => {
+      alert("Ocurrio un problema en la conexión...")
+      return null
+    })
 
-    let response = b[0]
-    console.log(response);
-    console.log(response.text)
+    if (a === null) return
+    
+    try{
 
-    document.getElementById('mensaje').innerText = response.text;
+      let b = await a.json()
+      let response = b[0]
+      console.log(response);
+      console.log(response.text)
+
+      document.getElementById('mensaje').innerText = response.text;
+
+    } catch ( err ) {
+      console.log(err);
+      alert("Ocurrio un problema, intente de nuevo...")
+      return
+    }
 
   }
 
