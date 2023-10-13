@@ -1,0 +1,52 @@
+.App{
+    margin: 50px;
+    margin-left: 150px;
+}
+
+.chat-box{
+    border: 1px solid salmon;
+    height: 380px;
+    padding: 15px 10px 15px 10px;
+    width: auto;
+    max-width: 380px;
+    border-radius: 25px 25px 0px 0px;
+}
+
+.message-box{
+    border: 1px solid salmon;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0%;
+    display: flex;
+    width: auto;
+    max-width: 400px;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.message-box-text{
+    border: none;
+    border-right: solid rgb(122, 117, 117) 1px;
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 0px 0px 0px 15px;
+    
+    flex: 1 1 auto;
+}
+
+.message-box-button{
+    padding: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    flex: 1 2 auto;
+}
+
+.message-box-button:hover{
+    color: white;
+    background-color: rgb(224, 224, 39);
+    cursor: pointer;
+    border-radius: 0px 0px 15px 0px;
+}
