@@ -1,6 +1,20 @@
 version: "3.1"
 
 stories:
+- story: Prueba hola
+  steps:
+  - user: |
+      oli
+    intent: oliTest
+  - action: utter_oliTest
+  - user: |
+      aloha
+    intent: oliTest
+  - action: utter_oliTest
+  - user: |
+      alo
+    intent: oliTest
+  - action: utter_oliTest
 
 - story: happy path
   steps:

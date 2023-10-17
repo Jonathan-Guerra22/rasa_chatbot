@@ -1,6 +1,14 @@
 version: "3.1"
 
 nlu:
+
+- intent: oliTest
+  examples: |
+    - ola
+    - alo
+    - oli pa ti
+
+
 - intent: greet
   examples: |
     - hey

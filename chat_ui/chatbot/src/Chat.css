@@ -1,3 +1,6 @@
+body{
+    /* background-color: rgb(136, 132, 89); */
+}
 .App{
     margin: 50px;
     margin-left: 150px;
@@ -24,6 +27,8 @@
 }
 
 .message-box-text{
+    /* background-color: blue;
+    color: aliceblue; */
     border: none;
     border-right: solid rgb(122, 117, 117) 1px;
     padding: 10px;
@@ -46,7 +51,8 @@
 
 .message-box-button:hover{
     color: white;
-    background-color: rgb(224, 224, 39);
+    background-color: rgb(185, 185, 33);
     cursor: pointer;
     border-radius: 0px 0px 15px 0px;
+    font-size: 45;
 }

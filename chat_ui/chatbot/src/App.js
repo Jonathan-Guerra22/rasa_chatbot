@@ -40,6 +40,7 @@ function App() {
       console.log(response);
       console.log(response.text)
 
+      document.getElementById('mensaje_user').innerText = val;
       document.getElementById('mensaje').innerText = response.text;
 
     } catch ( err ) {
@@ -57,6 +58,11 @@ function App() {
       <h1>ChatBot</h1>
       <div className='chat-box'>
         <h4>Mensajes</h4>
+        <br></br>
+        <p>Tu: </p>
+        <p id='mensaje_user'></p>
+        <br></br>
+        <p>Bot: </p>
         <p id='mensaje'></p>
       </div>
       <div className='message-box'>
