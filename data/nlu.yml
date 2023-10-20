@@ -11,32 +11,13 @@ nlu:
 
 - intent: greet
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Hola, ¿Como estás?, te habla el agente virtual de bloom, ¿En que te puedo ayudar?
+    - Hola, te habla el agente virtual de bloom, ¿En que te puedo ayudar?
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - Que estes muy bien, te esperamos pronto...
+    - Que estes muy bien, te esperamos pronto.
 
 - intent: affirm
   examples: |

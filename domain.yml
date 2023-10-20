@@ -8,31 +8,73 @@ intents:
   - mood_great
   - mood_unhappy
   - oliTest
+  - QueEsBloom
+  - PorQueInvertirEnBloom
+  - QuienPuedeInvertir
+  - QueInformacionNecesitanParaPoderInvertir
+  - ComoPuedoInvertir
+  - EnCuantoTiempoReciboLaGananciaMiInversion
+  - CualEsLaDuracionDeLosProyectos
+  - CuantasInversionesPuedoHacerAlTiempo
+  - EstaGarantizadaMiInversion
+  - PuedoRetirarElDineroDeMiCuenta
 
 responses:
-
   utter_oliTest:
-  - text: "caralinda"
-  - text: "caralinda2"
+    - text: "caralinda"
+    - text: "caralinda2"
 
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hola, ¿Como estás?, te habla el agente virtual de bloom, ¿En que te puedo ayudar?"
+    - text: "Hola, te habla el agente virtual de bloom, ¿En que te puedo ayudar?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Que estes muy bien, te esperamos pronto."
+    - text: "Que estes muy bien, te esperamos pronto..."
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
+
+  utter_Que_Es_Bloom:
+    - text: "Corresponde a Bloom Crowdfunding S.A., Sociedad de Financiación Colaborativa (SOFICO) autorizada por la Superintendencia Financiera de Colombia para desarrollar la actividad de financiación colaborativa."
+  
+  utter_Por_Que_Invertir_En_Bloom:
+    - text: "- Puedes invertir a través de una entidad vigilada por la Superintendencia Financiera de Colombia. \n- Tienes la oportunidad de invertir desde $50.000 COP en proyectos de alto impacto. \n- Encontrarás proyectos con una Tasa de Interés Efectiva Anual atractiva. \n- Contribuimos al crecimiento de pequeñas y medianas empresas del país. \n- Inviertes fácilmente a través de una plataforma intuitiva."
+
+  utter_Quien_Puede_Invertir:
+    - text: "Cualquier persona natural o jurídica debidamente registrada en nuestra plataforma."
+
+  utter_Que_Informacion_Necesitan_Para_Poder_Invertir:
+    - text: "- Correo electrónico, tipo, número y lugar de expedición del documento de identidad. \n - Datos de contacto, información financiera nacional e internacional. \n - Aceptar nuestra política de tratamiento de datos; reglamento de la entidad financiera aliada a los Términos y Condiciones de Bloom y el Reglamento de Bloom."
+
+  utter_Como_Puedo_Invertir:
+    - text: "Estos son los pasos que debes seguir para realizar una inversión desde nuestra plataforma.\nCrear una cuenta.\n1. Recargar con el valor que desees invertir.\n2. Explora los diferentes proyectos que ofrecemos.\n3. Click en el proyecto.\n4. Invierte.\nRecuerda: Puedes invertir desde un monto igual o superior a $50.000 COP, siempre por múltiplos de $10.000."
+
+  utter_En_Cuanto_Tiempo_Recibo_La_Ganancia_Mi_Inversion:
+    - text: "Se realizarán pagos periódicos de acuerdo a las condiciones de inversión que fueron pactadas en el proyecto. Estas condiciones se encuentran en la descripción de cada uno de los proyectos.\nLas cuotas a pagar pueden ser mensuales, bimestrales, trimestrales o semestrales durante un (1) mes a sesenta (60) meses, dependiendo del proyecto y su acuerdo de pago."
+
+  utter_Cual_Es_La_Duracion_De_Los_Proyectos:
+    - text: "La duración de cada proyecto es distinta y será determinada en las condiciones de inversión. El plazo máximo para la obtención de los recursos nunca podrá superar los seis (6) meses."
+
+  utter_Cuantas_Inversiones_Puedo_Hacer_Al_Tiempo:
+    - text: "Se puede invertir en uno o varios proyectos con la condición de que la suma de todas las inversiones realizadas no superen el 20% de tus ingresos anuales o de tu patrimonio."
+
+  utter_Esta_Garantizada_Mi_Inversion:
+    - text: "Los proyectos podrán tener una garantía a discreción del emprendedor. Si el proyecto cuenta con garantía, se indicará el porcentaje entre el 50% y 80% de la financiación que será garantizada."
+
+  utter_Puedo_Retirar_El_Dinero_De_Mi_Cuenta:
+    - text: "Si, el inversionista podrá retirar su dinero en la Plataforma de Bloom por diferentes escenarios:\n1. Retiro de dinero de la cuenta o depósito electrónico creado en Bloom a la cuenta del Inversionista:\nPuede solicitar el retiro de sus recursos de la cuenta creada en el banco o SEDPE aliada y ser enviados a su cuenta personal en una entidad financiera que elija siempre y cuando esté a nombre del mismo Inversionista.\n- Este proceso tendrá un costo de $5.000 COP + IVA.\n- Esta operación también podrá causar la obligación por parte del Inversionista a pagar el Gravamen a Movimientos Financieros (GMF)\n- Los costos extra y demás condiciones podrán ser variables ya que dependerán de las condiciones de cada Inversionista.\n2. Retiro de dinero de un Proyecto Productivo:\nEl Inversionista podrá solicitar el retiro de su inversión que ha depositado previamente en un Proyecto Productivo continuando con el proceso estipulado en la Plataforma.\nImportante: La solicitud sólo se podrá realizar si el Proyecto Productivo aún no se ha cerrado y se encuentra activo para recibir inversión, una vez el dinero esté descongelado, el Inversionista podrá disponer de sus recursos."
+
 
 session_config:
   session_expiration_time: 60

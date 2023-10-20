@@ -1,44 +1,165 @@
 version: "3.1"
 
 stories:
-- story: Prueba hola
-  steps:
-  - user: |
-      oli
-    intent: oliTest
-  - action: utter_oliTest
-  - user: |
-      aloha
-    intent: oliTest
-  - action: utter_oliTest
-  - user: |
-      alo
-    intent: oliTest
-  - action: utter_oliTest
+  - story: Prueba hola
+    steps:
+      - user: |
+          oli
+        intent: oliTest
+      - action: utter_oliTest
+      - user: |
+          aloha
+        intent: oliTest
+      - action: utter_oliTest
+      - user: |
+          alo
+        intent: oliTest
+      - action: utter_oliTest
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+  - story: que es bloom
+    steps:
+      - user: |
+          - Que es bloom
+          - ¿Que es bloom?
+          - ¿Qué es bloom?
+        intent: QueEsBloom
+      - action: utter_Que_Es_Bloom
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: Por Que Invertir En Bloom
+    steps:
+      - user: |
+          - ¿Por qué invertir a través de bloom?
+          - Por que invertir a través de bloom
+          - Por qué invertir a través de bloom
+          - ¿Por qué invertir en bloom?
+          - Por qué invertir en bloom
+          - ¿Porque invertir en bloom?
+          - Porque invertir en bloom
+          - Porque deberia invertir en bloom
+          - Por que deberia invertir en bloom
+        intent: PorQueInvertirEnBloom
+      - action: utter_Por_Que_Invertir_En_Bloom
+  
+  - story: Quien Puede Invertir
+    steps:
+      - user: |
+          - ¿Quién puede invertir?
+          - Quien Puede Invertir
+          - Quienes Pueden Invertir
+          - ¿Quienes Pueden Invertir?
+        intent: QuienPuedeInvertir
+      - action: utter_Quien_Puede_Invertir
+
+  - story: Que informacion necesitan para poder invertir
+    steps:
+      - user: |
+          - ¿Qué información necesitan para poder invertir?
+          - Qué información necesitan para poder invertir
+          - Que informacion necesitan para poder invertir
+          - Que información necesitan para invertir
+          - Que información solicitan para invertir
+          - Que información solicitan para poder invertir
+          - Que información requiren para poder invertir
+        intent: QueInformacionNecesitanParaPoderInvertir
+      - action: utter_Que_Informacion_Necesitan_Para_Poder_Invertir
+
+  - story: Como puedo invertir
+    steps:
+      - user: |
+          - ¿Cómo puedo invertir?
+          - ¿Como puedo invertir?
+          - Cómo puedo invertir
+          - Como puedo invertir
+          - ¿De que manera puedo invertir?
+          - De que manera puedo invertir
+          - ¿Como se invierte?
+          - Como se invierte
+          - ¿Como se puede invertir?
+          - Como se puede invertir
+        intent: ComoPuedoInvertir
+      - action: utter_Como_Puedo_Invertir
+
+  - story: En cuanto tiempo recibo la ganancia de mi inversion
+    steps:
+      - user: |
+          - ¿En cuánto tiempo recibo la ganancia de mi inversión?
+          - En cuánto tiempo recibo la ganancia de mi inversión
+          - ¿En cuanto tiempo recibo la ganancia de mi inversion?
+          - En cuanto tiempo recibo la ganancia de mi inversion
+          - En cuanto se demoran en darme mi ganancia
+          - ¿En cuanto se demoran en darme mi ganancia?
+          - mi ganancia en cuanto tiempo la recibiria
+          - ¿mi ganancia en cuanto tiempo la recibiria?
+          - cuando veo mi ganancia
+          - ¿cuando veo mi ganancia?
+        intent: EnCuantoTiempoReciboLaGananciaMiInversion
+      - action: utter_En_Cuanto_Tiempo_Recibo_La_Ganancia_Mi_Inversion
+
+  - story: Cual es la duracion de los proyectos
+    steps:
+      - user: |
+          - ¿Cuál es la duración de los proyectos?
+          - Cuál es la duración de los proyectos
+          - Cual es la duracion de los proyectos
+          - Cuanto dura un proyecto
+        intent: CualEsLaDuracionDeLosProyectos
+      - action: utter_Cual_Es_La_Duracion_De_Los_Proyectos
+
+  - story: Cuantas inversiones puedo hacer al tiempo
+    steps:
+      - user: |
+          - ¿Cuantas inversiones puedo hacer al tiempo?
+          - Cuantas inversiones puedo hacer al tiempo
+          - Cuantas inversiones puedo hacer a la vez
+          - ¿Cuantas inversiones puedo hacer a la vez?
+        intent: CuantasInversionesPuedoHacerAlTiempo
+      - action: utter_Cuantas_Inversiones_Puedo_Hacer_Al_Tiempo
+
+  - story: Esta garantizada mi inversion
+    steps:
+      - user: |
+          - ¿Está garantizada mi inversión?  
+          - Está garantizada mi inversión
+          - Tengo garantizada mi inversion
+        intent: EstaGarantizadaMiInversion
+      - action: utter_Esta_Garantizada_Mi_Inversion
+
+  - story: Puedo retirar el dinero de mi cuenta
+    steps:
+      - user: |
+          - ¿Puedo retirar el dinero de mi cuenta?
+          - Puedo retirar el dinero de mi cuenta
+          - Como puedo retirar el dinero de mi cuenta
+          - Como puedo sacar el dinero de mi cuenta
+        intent: PuedoRetirarElDineroDeMiCuenta
+      - action: utter_Puedo_Retirar_El_Dinero_De_Mi_Cuenta
+
+
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
