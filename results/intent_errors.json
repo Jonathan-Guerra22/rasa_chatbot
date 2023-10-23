@@ -1,10 +1,10 @@
 [
   {
-    "text": "- ¿Por qué invertir a través de bloom?\n- Por que invertir a través de bloom\n- Por qué invertir a través de bloom\n- ¿Por qué invertir en bloom?\n- Por qué invertir en bloom\n- ¿Porque invertir en bloom?\n- Porque invertir en bloom\n- Porque deberia invertir en bloom\n- Por que deberia invertir en bloom",
-    "intent": "PorQueInvertirEnBloom",
+    "text": "- ¿Que es un proyecto productivo de crowdfunding?\n- ¿Que significa proyecto productivo de crowdfunding?\n- ¿Que es significa proyecto productivo?",
+    "intent": "TieneCostoPostularUnProyecto",
     "intent_prediction": {
-      "name": "QueEsBloom",
-      "confidence": 0.9575707316398621
+      "name": "ProyectoProductivo",
+      "confidence": 0.6501983404159546
     }
   }
 ]

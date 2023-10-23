@@ -1,20 +1,25 @@
 version: "3.1"
 
 stories:
-  - story: Prueba hola
+
+  - story: lo que sea
+    steps:
+      - intent: LoQueSea
+      - action: utter_greet
+
+  - story: saludo
     steps:
       - user: |
-          oli
-        intent: oliTest
-      - action: utter_oliTest
+          - hola
+        intent: greet
+      - action: utter_greet
+
+  - story: despedida
+    steps:
       - user: |
-          aloha
-        intent: oliTest
-      - action: utter_oliTest
-      - user: |
-          alo
-        intent: oliTest
-      - action: utter_oliTest
+          - adios
+        intent: goodbye
+      - action: utter_goodbye
 
   - story: que es bloom
     steps:
@@ -134,32 +139,130 @@ stories:
           - Como puedo sacar el dinero de mi cuenta
         intent: PuedoRetirarElDineroDeMiCuenta
       - action: utter_Puedo_Retirar_El_Dinero_De_Mi_Cuenta
-
-
-
-  - story: happy path
+  
+  - story: Puedo cancelar mi inversion
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_great
-      - action: utter_happy
-
-  - story: sad path 1
+      - user: |
+          - ¿Puedo cancelar mi inversión?
+          - Puedo cancelar mi inversión
+          - Puedo cancelar mi inversion
+          - Puedo retirar mi inversion
+          - Como saco mi dinero de mi inversion
+        intent: PuedoCancelarMiInversion
+      - action: utter_Puedo_Cancelar_Mi_Inversion
+  
+  - story: Que_Es_GMF
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
-
-  - story: sad path 2
+      - user: |
+          - ¿Qué es GMF?
+          - Qué es GMF
+        intent: QueEsGMF
+      - action: utter_Que_Es_GMF
+  
+  - story: A Quienes se le compartiria mis datos personales
     steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
+      - user: |
+          - ¿A quienes se le compartiría mis datos personales?
+          - A quienes se le compartiría mis datos personales
+          - A quien se le dará mis datos personales
+          - A quien se le dará mi informacion
+          - A quien se le dará mi informacion personal
+        intent: AQuienesSeLeCompartiriaMisDatosPersonales
+      - action: utter_A_Quienes_Se_Le_Compartiria_Mis_Datos_Personales
+  
+  - story: Como cancelar mi cuenta del banco Cooperativo Coopcentral
+    steps:
+      - user: |
+          - ¿Cómo cancelar mi cuenta del banco Cooperativo Coopcentral?
+          - Cómo cancelar mi cuenta del banco Cooperativo Coopcentral
+          - ¿Como cancelar mi cuenta del banco Coopcentral?
+          - Como cancelar mi cuenta del banco Coopcentral
+          - Como cancelar mi cuenta Coopcentral
+        intent: ComoCancelarMiCuentaDelBancoCooperativoCoopcentral
+      - action: utter_Como_Cancelar_Mi_Cuenta_Del_Banco_Cooperativo_Coopcentral
+  
+  - story: Canales Coopcentral
+    steps:
+      - user: |
+          - ¿Cuáles son los canales de atención de Banco Cooperativo Coopcentral para peticiones, quejas, reclamos y/o sugerencias?
+          - ¿Donde puedo realizar peticiones, quejas, reclamos y/o sugerencias a Coopcentral?
+          - ¿Donde puedo realizar peticiones, quejas, reclamos y/o sugerencias al Banco Coopcentral?
+          - ¿Donde puedo realizar peticiones, quejas, reclamos y/o sugerencias al Banco Cooperativo Coopcentral?
+          - ¿Cuáles son los canales de atención de Banco Coopcentral?
+        intent: CanalesCoopcentral
+      - action: utter_Canales_Coopcentral
+
+  - story: Que es un proyecto productivo de crowdfunding
+    steps:
+      - user: |
+          - ¿Que es un proyecto productivo de crowdfunding?
+          - ¿Que significa proyecto productivo de crowdfunding?
+          - ¿Que es significa proyecto productivo?
+        intent: ProyectoProductivo
+      - action: utter_Proyecto_Productivo
+
+  - story: Tiene costo postular un proyecto
+    steps:
+      - user: |
+          - ¿Que es un proyecto productivo de crowdfunding?
+          - ¿Que significa proyecto productivo de crowdfunding?
+          - ¿Que es significa proyecto productivo?
+        intent: TieneCostoPostularUnProyecto
+      - action: utter_Tiene_Costo_Postular_Un_Proyecto
+  
+  - story: Como puedo inscribir un proyecto
+    steps:
+      - user: |
+          - ¿Cómo puedo inscribir un proyecto?
+        intent: ComoPuedoInscribirUnProyecto
+      - action: utter_Como_Puedo_Inscribir_Un_Proyecto
+  
+  - story: Cuales son los montos minimos y maximos a financiar
+    steps:
+      - user: |
+          - ¿Cuáles son los montos mínimos y máximos a financiar?
+          - ¿Que significa y es monto mínimo y máximo?
+          - ¿Cuáles son los montos a financiar?
+        intent: MontosMinimosMaximosFinanciar
+      - action: utter_Montos_Minimos_Maximos_Financiar
+
+  - story: Los proyectos tienen riesgos
+    steps:
+      - user: |
+          - ¿Los proyectos tienen riesgos?
+          - ¿Existen riegos con los proyectos?
+          - ¿Hay riegos en los proyectos?
+        intent: LosProyectosTienenRiesgos
+      - action: utter_Los_Proyectos_Tienen_Riesgos
+
+  - story: Cuanto tiempo puede durar los proyectos en etapa de publicacion
+    steps:
+      - user: |
+          - ¿Cuanto tiempo puede durar los proyectos en etapa de publicacion?
+        intent: DuracionProyectosEnEtapaDePublicacion
+      - action: utter_Duracion_Proyectos_En_Etapa_De_Publicacion
+  
+  - story: Existe periodo de gracia en la financiacion
+    steps:
+      - user: |
+          - ¿Existe periodo de gracia en la financiacion?
+        intent: ExistePeriodoDeGraciaEnLaFinanciacion
+      - action: utter_Existe_Periodo_De_Gracia_En_La_Financiacion
+
+  - story: Como se cierra positivamente un proyecto
+    steps:
+      - user: |
+          - ¿Cómo se cierra positivamente un proyecto?
+        intent: ComoSeCierraPositivamenteUnProyecto
+      - action: utter_Como_Se_Cierra_Positivamente_Un_Proyecto
+
+  - story: Retiro De Dinero De Un Proyecto
+    steps:
+      - user: |
+          - ¿Cómo retiro una inversion de un proyecto?
+          - ¿Puedo retirar una inversion de un proyecto?
+        intent: RetiroDeDineroDeUnProyecto
+      - action: utter_Retiro_De_Dinero_De_Un_Proyecto
+
+
+

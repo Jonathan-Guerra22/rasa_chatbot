@@ -7,7 +7,7 @@ function App() {
     const val = document.getElementById('input-box').value;
     console.log(val);
 
-    if (val === ""){
+    if (val === "") {
       alert("No ingreso un texto valido")
       return
     }
@@ -26,14 +26,14 @@ function App() {
     };
 
     let a = await fetch('http://localhost:5005/webhooks/rest/webhook', requestOptions)
-    .catch(err => {
-      alert("Ocurrio un problema en la conexión...")
-      return null
-    })
+      .catch(err => {
+        alert("Ocurrio un problema en la conexión...")
+        return null
+      })
 
     if (a === null) return
-    
-    try{
+
+    try {
 
       let b = await a.json()
       let response = b[0]
@@ -43,7 +43,7 @@ function App() {
       document.getElementById('mensaje_user').innerText = val;
       document.getElementById('mensaje').innerText = response.text;
 
-    } catch ( err ) {
+    } catch (err) {
       console.log(err);
       alert("Ocurrio un problema, intente de nuevo...")
       return
@@ -53,26 +53,45 @@ function App() {
 
   const handleKeyDown = (event) => { if (event.key === 'Enter') send() }
 
+  // useEffect(() => {
+    
+  
+  //   return () => {
+      
+  //   }
+  // }, [])
+  
+
   return (
     <div className="App">
       <h1>ChatBot</h1>
       <div className='chat-box'>
-        <h4>Mensajes</h4>
+        <h4 className='mensaje_title'>Mensajes</h4>
         <br></br>
-        <p>Tu: </p>
-        <p id='mensaje_user'></p>
         <br></br>
-        <p>Bot: </p>
-        <p id='mensaje'></p>
-      </div>
-      <div className='message-box'>
-        <input onKeyDown={handleKeyDown} id='input-box' className='message-box-text'
-          placeholder='Enviar mensaje'
-        />
-        <div onClick={send} className='message-box-button'>
-          Enviar
+        <div className='container'>
+          <div className='user-container'>
+            {/* <p className='user_title'>Tu: </p> */}
+            <p id='mensaje_user'>...</p>
+          </div>
+          <br></br>
+          <div className='bot-container'>
+            {/* <p className='bot_title'>Bot: </p> */}
+            <p id='mensaje'>...</p>
+          </div>
         </div>
       </div>
+        <div className='container-send-box'>
+
+          <div className='message-box'>
+            <input onKeyDown={handleKeyDown} id='input-box' className='message-box-text'
+              placeholder='Enviar mensaje'
+            />
+            <div onClick={send} className='message-box-button'>
+              Enviar
+            </div>
+          </div>
+        </div>
     </div>
   );
 }

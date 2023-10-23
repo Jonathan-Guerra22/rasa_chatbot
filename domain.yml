@@ -3,11 +3,6 @@ version: "3.1"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - oliTest
   - QueEsBloom
   - PorQueInvertirEnBloom
   - QuienPuedeInvertir
@@ -18,32 +13,34 @@ intents:
   - CuantasInversionesPuedoHacerAlTiempo
   - EstaGarantizadaMiInversion
   - PuedoRetirarElDineroDeMiCuenta
+  - PuedoCancelarMiInversion
+  - QueEsGMF
+  - AQuienesSeLeCompartiriaMisDatosPersonales
+  - ComoCancelarMiCuentaDelBancoCooperativoCoopcentral
+  - CanalesCoopcentral
+  - LoQueSea
+  - ProyectoProductivo
+  - TieneCostoPostularUnProyecto
+  - ComoPuedoInscribirUnProyecto
+  - MontosMinimosMaximosFinanciar
+  - LosProyectosTienenRiesgos
+  - DuracionProyectosEnEtapaDePublicacion
+  - ExistePeriodoDeGraciaEnLaFinanciacion
+  - ComoSeCierraPositivamenteUnProyecto
+  - RetiroDeDineroDeUnProyecto
 
 responses:
-  utter_oliTest:
-    - text: "caralinda"
-    - text: "caralinda2"
+
+  utter_Lo_Que_Sea:
+    - text: "Disculpa no conprendi..."
 
   utter_greet:
     - text: "Hola, ¿Como estás?, te habla el agente virtual de bloom, ¿En que te puedo ayudar?"
     - text: "Hola, te habla el agente virtual de bloom, ¿En que te puedo ayudar?"
 
-  utter_cheer_up:
-    - text: "Here is something to cheer you up:"
-      image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-    - text: "Did that help you?"
-
-  utter_happy:
-    - text: "Great, carry on!"
-
   utter_goodbye:
     - text: "Que estes muy bien, te esperamos pronto."
     - text: "Que estes muy bien, te esperamos pronto..."
-
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
 
   utter_Que_Es_Bloom:
     - text: "Corresponde a Bloom Crowdfunding S.A., Sociedad de Financiación Colaborativa (SOFICO) autorizada por la Superintendencia Financiera de Colombia para desarrollar la actividad de financiación colaborativa."
@@ -74,6 +71,48 @@ responses:
 
   utter_Puedo_Retirar_El_Dinero_De_Mi_Cuenta:
     - text: "Si, el inversionista podrá retirar su dinero en la Plataforma de Bloom por diferentes escenarios:\n1. Retiro de dinero de la cuenta o depósito electrónico creado en Bloom a la cuenta del Inversionista:\nPuede solicitar el retiro de sus recursos de la cuenta creada en el banco o SEDPE aliada y ser enviados a su cuenta personal en una entidad financiera que elija siempre y cuando esté a nombre del mismo Inversionista.\n- Este proceso tendrá un costo de $5.000 COP + IVA.\n- Esta operación también podrá causar la obligación por parte del Inversionista a pagar el Gravamen a Movimientos Financieros (GMF)\n- Los costos extra y demás condiciones podrán ser variables ya que dependerán de las condiciones de cada Inversionista.\n2. Retiro de dinero de un Proyecto Productivo:\nEl Inversionista podrá solicitar el retiro de su inversión que ha depositado previamente en un Proyecto Productivo continuando con el proceso estipulado en la Plataforma.\nImportante: La solicitud sólo se podrá realizar si el Proyecto Productivo aún no se ha cerrado y se encuentra activo para recibir inversión, una vez el dinero esté descongelado, el Inversionista podrá disponer de sus recursos."
+  
+  utter_Puedo_Cancelar_Mi_Inversion:
+    - text: "Sí, siempre y cuando no se haya alcanzado la meta del proyecto dentro del plazo determinado. Puedes retirar la cantidad total o parcial invertida."
+  
+  utter_Que_Es_GMF:
+    - text: "El Gravamen a los Movimientos Financieros, hace referencia al cobro por transacciones de entrada o salida de recursos de una cuenta del sector financiero. Si superas alguno de los siguientes topes se realizan estos cobros:\n- A partir de $2.756.780 en adelante se cobra el 4x1000, es decir, cuatro (4) pesos por cada Mil (1.000) pesos.\n- Si tu cuenta está exenta del 4x1000, pero superas el monto de $14.844.200 se realizará el cobro de este gravamen.\nRecuerda: Sólo puedes tener una cuenta exenta del 4x1000 ésta normalmente es la primera cuenta que abriste en el sector financiero."
+  
+  utter_A_Quienes_Se_Le_Compartiria_Mis_Datos_Personales:
+    - text: "Tus información será protegida y guardada por Bloom. En caso de que inviertas en algún proyecto, tu información se compartirá con la empresa del mismo."
+
+  utter_Como_Cancelar_Mi_Cuenta_Del_Banco_Cooperativo_Coopcentral:
+    - text: "Para cancelar completamente tu cuenta, debes realizar una solicitud a través de alguno de nuestros canales de atención al cliente, indicando el motivo y cumpliendo las siguientes condiciones:\n- No tener saldo en la cuenta.\n- No tener inversiones activas."
+  
+  utter_Canales_Coopcentral:
+    - text: "Estos son los canales por los que te podrás comunicar con el Banco Cooperativo Coopcentral:\n- Correo electrónico: sac@coopcentral.com.co\n- Pbx: 6017431088\n- Celular: 3158059032\n- Enlace web: www.coopcentral.com.co/apps_web/pqrs/"
+  
+  utter_Proyecto_Productivo:
+    - text: "Para efectos de las normas que regulan la actividad de financiación colaborativa, se entiende por proyecto productivo aquel desarrollado por personas jurídicas con el fin de obtener una rentabilidad económica a partir de actividades empresariales, agropecuarias, industriales, comerciales o de servicios."
+
+  utter_Tiene_Costo_Postular_Un_Proyecto:
+    - text: "- El estudio financiero que realizamos de tu proyecto tiene un costo de $100.000 COP.\n- Si tu proyecto continúa el proceso en la plataforma y logró un recaudo exitoso, el costo será equivalente al 3% del total recolectado y se realizará un cobro del 1% por administración."
+  
+  utter_Como_Puedo_Inscribir_Un_Proyecto:
+    - text: "Debes ser una persona jurídica constituida en Colombia que cumpla con los requisitos establecidos por el reglamento los anexos operativos de Bloom.\nEsta es la documentación solicitada para inscribir y postular tu proyecto:\n1. Certificado de Existencia y Representación Legal con antigüedad no mayor a 30 días y RUT.\n2. Estados financieros del último corte fiscal firmado por un contador.\n3. Declaración de renta del último año.\n4. Fotocopia cédula del Representante Legal.\n5. Certificado de composición accionaria (con cédulas o NIT respectivamente).\n6. Formulario del Banco o SEDPE aliada donde se aperturará la cuenta, diligenciado y firmado debidamente.\n7. Estatutos sociales.\n8. Referencia financiera.\n9. Referencia comercial.\n10. Autorización firmada por parte de todos los socios o accionistas que tengan un 5% o más de la participación social para consultarlos en centrales de riesgo."
+  
+  utter_Montos_Minimos_Maximos_Financiar:
+    - text: "- El monto mínimo:\n🔹100 millones.\n- El monto máximo:\n🔹19 mil SMMLV, si NO hay ningún corredor de bolsa durante el proceso de recaudo\n🔹58 mil SMMLV, si hay al menos un corredor de bolsa durante el proceso de recaudo."
+  
+  utter_Los_Proyectos_Tienen_Riesgos:
+    - text: "Todo proyecto implica un riesgo por más mínimo o improbable que sea.\nImportante: Al momento de realizar una inversión, los inversionistas tendrán a su disposición los riesgos implicados."
+  
+  utter_Duracion_Proyectos_En_Etapa_De_Publicacion:
+    - text: "La duración dependerá de cada proyecto, sin embargo, el tiempo máximo para recaudar los recursos será de 6 meses."
+  
+  utter_Existe_Periodo_De_Gracia_En_La_Financiacion:
+    - text: "Sí, contamos con 3 tipos de períodos de gracia:\n- Período de gracia 0: Sin pago de interés ni capital en plazo pactado.\n- Interés: Paga interés sin capital en plazo pactado.\n- Abonado: Paga interés y capital en primera cuota después del plazo pactado."
+  
+  utter_Como_Se_Cierra_Positivamente_Un_Proyecto:
+    - text: "Un proyecto se cierra positivamente cuando:\n- Se recauda el monto mínimo de financiación dentro del plazo determinado.\n- Hasta alcanzar el monto máximo de financiación."
+    
+  utter_Retiro_De_Dinero_De_Un_Proyecto:
+    - text: "El Inversionista podrá solicitar el retiro de su inversión que ha depositado previamente en un Proyecto Productivo continuando con el proceso estipulado en la Plataforma."
 
 
 session_config:
